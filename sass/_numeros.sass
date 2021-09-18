@@ -1,0 +1,32 @@
+//valor + unidade de medida
+//exemplo: 100% , 10rem, 1px
+//rem e px não são compativeis
+//precisão de numeros vai até 10 casas
+///rodar na raiz sass --watch sass/styles.sass:css/styles.css
+@use "sass:math"
+
+@warn "Numeros: "
+
+@debug 100%
+@debug (10 * 5) +px   
+@debug 10px
+@debug 20rem     
+
+$var1: 10
+$var2: 5
+
+@debug 10 % 5
+@debug 10 * 5 
+@debug +(5s + 7s) // 12s
+@debug -(50px + 30px) // -80px soma depois aplica condição negativa
+@debug -(10px - 15px) // 5px
+
+//divisão
+//Substituido pela função abaixo importada da biblioteca "sass:math"
+//@debug (10 / 2)
+@debug 10 / 2  //não funciona dessa forma divisão precisa colocar valores dentro do parenteses
+@debug math.div(10, 2)
+
+//o Sass entende quando passa um valor de medida atribuido em um dos valores
+$var3: 25
+@debug ($var3 * 3%)

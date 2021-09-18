@@ -1,0 +1,20 @@
+//strings validas com aspas "nome" ou sem aspas
+//Pode interpolar valores e concatenar valores
+
+@warn "Strings: "
+
+$string: "Roboto"
+$string2: Roboto
+
+@debug $string == $string2
+
+$nome-font: "Open"
+$var1: "Sans"
+
+@debug $nome-font + " " + $var1
+
+p
+    font-family: $nome-font + " " + $var1
+
+h1
+    font-family: "#{$nome-font} #{$var1}"
