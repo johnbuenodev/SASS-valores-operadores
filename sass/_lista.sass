@@ -1,0 +1,19 @@
+@warn "Listas"
+
+//array    
+$valueFontSize: 10, 50, 80, 100
+
+
+//Estrutura de repetição
+@each $var in $valueFontSize
+ @debug $var
+
+
+@each $var in $valueFontSize
+  @if $var < 90
+    p-#{$var}
+        font-size: $var + "px"
+
+
+     
+     

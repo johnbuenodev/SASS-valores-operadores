@@ -1,0 +1,20 @@
+@use "sass:math"
+//importa a classe sass:math antes ao topo antes do @warn
+@warn "Operadores Matematicos"
+
+$value0: 3    
+$value1: 2
+$value2: 5
+$value3: 10
+
+@debug $value1 + $value2
+@debug $value1 - $value2
+@debug $value3 * $value2
+//divisão
+//depreciada 
+@debug ($value3/$value1)
+//versao correta    
+@debug math.div($value3 , $value1)
+//resto
+@debug $value3 % $value1
+@debug $value3 % $value0

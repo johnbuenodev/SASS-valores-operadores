@@ -1,0 +1,24 @@
+@use 'sass:map'
+@warn "Maps"
+
+//Os maps são como objetos no SASS
+//Precisamos colocar chave e valor , exemplo "key": 2 , "abacate": 10
+
+$map1: ("key1":1,"key2":2,"key3":50)
+$font-weights: ("regular":400,"bold":700, "black":900)
+
+@each $var in $map1
+  @debug $var     
+
+
+h4
+    font-weight: map.get($font-weights,"black")
+
+h3
+    font-weight: map.get($font-weights,"regular")
+
+
+@each $key, $value in $font-weights
+  .p-#{$key}
+      font-weight: #{$value}
+     

@@ -1,0 +1,12 @@
+@warn "Comparadores de Iguais e Diferença"
+
+@debug 2 != 2    
+@debug 10px != 10rem
+@debug 10px == 10%
+@debug "Sans" == Sans
+
+$value1: 50    
+
+@if $value1 != 60
+  h2
+      font-size: $value1 + 30px 
